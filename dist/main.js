@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://leader-board/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\r\nconst items = document.getElementById('items');\r\n\r\nitems.innerHTML = 'hello';\r\n\r\n// get data from Api\r\nconst getData = async() => {\r\n    const res = await fetch('https://pokeapi.co/api/v2/pokemon/');\r\n    const data = await res.json()\r\n    console.log(data);\r\n}\r\n\r\ngetData()\n\n//# sourceURL=webpack://leader-board/./src/index.js?");
 
 /***/ })
 

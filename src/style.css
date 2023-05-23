@@ -1,3 +1,36 @@
-body {
-    background-color: bisque;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 15%;
+  height: 100px;
+  background-color: #fff;
+}
+
+.start-btn {
+  display: flex;
+  position: relative;
+  gap: 8rem;
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  top: 80vh;
+  font-size: 17px;
+  width: 50%;
+  left: 50vh;
 }

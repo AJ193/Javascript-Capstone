@@ -1,4 +1,19 @@
 import './style.css';
+import movie from './assets/movie.png';
+
+const logo = document.getElementById('logo');
+logo.src = movie;
+
+const container = document.getElementById('cont');
+container.appendChild(logo);
+
+// closing the comment section
+const closeBtn = document.getElementById('close-button');
+const showMovie = document.getElementById('movie');
+
+closeBtn.addEventListener('click', () => {
+  showMovie.style.display = 'none';
+});
 
 // get data from Api
 const getData = async () => {
@@ -20,8 +35,13 @@ const populateData = async () => {
       items.innerHTML += `
         <div class="poke">
             <img id="image" src=${data.image.medium}>
-            <p>${data.name}</p>
-            <button class="commentBtn" data-index="${i}">comment</button>
+            <div class="pop">
+                <div>
+                    <p>${data.name}</p>
+                    <button class="commentBtn" data-index="${i}">comment</button>
+                </div>
+                <i class="fa-regular fa-heart" data-index="${i}"></i>
+            </div>
         </div>
         `;
     }
@@ -30,10 +50,25 @@ const populateData = async () => {
 
 populateData();
 
-items.addEventListener('click', (event) => {
-    if (event.target.classList.contains('commentBtn')) {
-        const index = parseInt(event.target.dataset.index, 10)
-        console.log(index)
-        
-    }
-})
+items.addEventListener('click', async (event) => {
+  if (event.target.classList.contains('commentBtn')) {
+    const index = parseInt(event.target.dataset.index, 10);
+    const data = await getData();
+    const selectedMovie = data[index];
+
+    const showinfo = document.getElementById('showinfo');
+    showinfo.innerHTML = `
+        <img class="pop-img" src=${selectedMovie.image.medium}>
+        <p class="movieName">${selectedMovie.name}</p>
+        <div class="info">
+            <p class="sum">LANGUAGE: ${selectedMovie.language}</p>
+            <p class="sum">STATUS: ${selectedMovie.status}</p>
+            <p class="sum">PREMIERED: ${selectedMovie.premiered}</p>
+            <p class="sum">ENDED: ${selectedMovie.ended}</p>
+        </div>
+        `;
+
+    const showMovie = document.getElementById('movie');
+    showMovie.style.display = 'block';
+  }
+});

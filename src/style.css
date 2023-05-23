@@ -1,8 +1,118 @@
-body {
-  background-color: dimgrey;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* .poke {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-} */
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 15%;
+  height: 100px;
+  background-color: #fff;
+  margin: 18px;
+}
+
+.start-btn {
+  display: flex;
+  position: relative;
+  gap: 8rem;
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  top: 80vh;
+  font-size: 17px;
+  width: 50%;
+  left: 50vh;
+}
+
+.pop {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.poke {
+  width: fit-content;
+}
+
+#close-button {
+  position: fixed;
+  right: 0;
+  margin-right: 4em;
+  background: none;
+  font-size: x-large;
+  border: none;
+}
+
+.movie {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 4em;
+  border: 1px solid lightgray;
+  height: 76vh;
+  top: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+}
+
+#logo {
+  width: 7rem;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.sum {
+  text-align: center;
+  margin: 2px;
+  font-size: 12px;
+  font-family: cursive;
+  font-weight: 900;
+  color: lightseagreen;
+}
+
+.movieName {
+  margin: 4px;
+  font-family: cursive;
+  font-size: 24px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 45%;
+  column-gap: 10px;
+}
+
+.showinfo {
+  display: contents;
+}

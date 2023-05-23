@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\r\\n    background-color: bisque;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://leader-board/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\r\\n  box-sizing: border-box;\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n}\\r\\n\\r\\na {\\r\\n  text-decoration: none;\\r\\n}\\r\\n\\r\\nheader {\\r\\n  display: flex;\\r\\n  align-items: center;\\r\\n  justify-content: space-between;\\r\\n  padding: 2% 15%;\\r\\n  height: 100px;\\r\\n  background-color: #fff;\\r\\n  margin: 18px;\\r\\n}\\r\\n\\r\\n.start-btn {\\r\\n  display: flex;\\r\\n  position: relative;\\r\\n  gap: 8rem;\\r\\n}\\r\\n\\r\\n.footer {\\r\\n  display: flex;\\r\\n  position: relative;\\r\\n  align-items: center;\\r\\n  top: 80vh;\\r\\n  font-size: 17px;\\r\\n  width: 50%;\\r\\n  left: 50vh;\\r\\n}\\r\\n\\r\\n.pop {\\r\\n  display: flex;\\r\\n  justify-content: space-between;\\r\\n  padding: 5px 0;\\r\\n}\\r\\n\\r\\n.poke {\\r\\n  width: fit-content;\\r\\n}\\r\\n\\r\\n#close-button {\\r\\n  position: fixed;\\r\\n  right: 0;\\r\\n  margin-right: 4em;\\r\\n  background: none;\\r\\n  font-size: x-large;\\r\\n  border: none;\\r\\n}\\r\\n\\r\\n.movie {\\r\\n  display: none;\\r\\n  position: fixed;\\r\\n  top: 0;\\r\\n  left: 0;\\r\\n  height: 100vh;\\r\\n  width: 100vw;\\r\\n  background-color: rgba(0, 0, 0, 0.8);\\r\\n}\\r\\n\\r\\n.popup {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  align-items: center;\\r\\n  border-radius: 2px;\\r\\n  padding: 10px;\\r\\n  margin: 4em;\\r\\n  border: 1px solid lightgray;\\r\\n  height: 76vh;\\r\\n  top: 0;\\r\\n  position: fixed;\\r\\n  bottom: 0;\\r\\n  right: 0;\\r\\n  left: 0;\\r\\n  background: #fff;\\r\\n}\\r\\n\\r\\n#logo {\\r\\n  width: 7rem;\\r\\n}\\r\\n\\r\\n.items {\\r\\n  display: grid;\\r\\n  grid-template-columns: 1fr 1fr 1fr 1fr;\\r\\n}\\r\\n\\r\\n.sum {\\r\\n  text-align: center;\\r\\n  margin: 2px;\\r\\n  font-size: 12px;\\r\\n  font-family: cursive;\\r\\n  font-weight: 900;\\r\\n  color: lightseagreen;\\r\\n}\\r\\n\\r\\n.movieName {\\r\\n  margin: 4px;\\r\\n  font-family: cursive;\\r\\n  font-size: 24px;\\r\\n}\\r\\n\\r\\n.info {\\r\\n  display: grid;\\r\\n  grid-template-columns: auto auto;\\r\\n  width: 45%;\\r\\n  column-gap: 10px;\\r\\n}\\r\\n\\r\\n.showinfo {\\r\\n  display: contents;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://leader-board/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\r\nconst items = document.getElementById('items');\r\n\r\nitems.innerHTML = 'hello';\r\n\r\n// get data from Api\r\nconst getData = async() => {\r\n    const res = await fetch('https://pokeapi.co/api/v2/pokemon/');\r\n    const data = await res.json()\r\n    console.log(data);\r\n}\r\n\r\ngetData()\n\n//# sourceURL=webpack://leader-board/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_movie_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/movie.png */ \"./src/assets/movie.png\");\n\n\n\nconst logo = document.getElementById('logo');\nlogo.src = _assets_movie_png__WEBPACK_IMPORTED_MODULE_1__;\n\nconst container = document.getElementById('cont');\ncontainer.appendChild(logo);\n\n// closing the comment section\nconst closeBtn = document.getElementById('close-button');\nconst showMovie = document.getElementById('movie');\n\ncloseBtn.addEventListener('click', () => {\n  showMovie.style.display = 'none';\n});\n\n// get data from Api\nconst getData = async () => {\n  const res = await fetch('https://api.tvmaze.com/shows');\n  const data = await res.json();\n  return data;\n};\n\ngetData();\n\n// display pokemon data\nconst items = document.getElementById('items');\n\nconst populateData = async () => {\n  const data = await getData();\n  const limit = 12;\n  data.forEach((data, i) => {\n    if (i < limit) {\n      items.innerHTML += `\n        <div class=\"poke\">\n            <img id=\"image\" src=${data.image.medium}>\n            <div class=\"pop\">\n                <div>\n                    <p>${data.name}</p>\n                    <button class=\"commentBtn\" data-index=\"${i}\">comment</button>\n                </div>\n                <i class=\"fa-regular fa-heart\" data-index=\"${i}\"></i>\n            </div>\n        </div>\n        `;\n    }\n  });\n};\n\npopulateData();\n\nitems.addEventListener('click', async (event) => {\n  if (event.target.classList.contains('commentBtn')) {\n    const index = parseInt(event.target.dataset.index, 10);\n    const data = await getData();\n    const selectedMovie = data[index];\n\n    const showinfo = document.getElementById('showinfo');\n    showinfo.innerHTML = `\n        <img class=\"pop-img\" src=${selectedMovie.image.medium}>\n        <p class=\"movieName\">${selectedMovie.name}</p>\n        <div class=\"info\">\n            <p class=\"sum\">LANGUAGE: ${selectedMovie.language}</p>\n            <p class=\"sum\">STATUS: ${selectedMovie.status}</p>\n            <p class=\"sum\">PREMIERED: ${selectedMovie.premiered}</p>\n            <p class=\"sum\">ENDED: ${selectedMovie.ended}</p>\n        </div>\n        `;\n\n    const showMovie = document.getElementById('movie');\n    showMovie.style.display = 'block';\n  }\n});\n\n//# sourceURL=webpack://leader-board/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/movie.png":
+/*!******************************!*\
+  !*** ./src/assets/movie.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e634f7e646de709dd5d6.png\";\n\n//# sourceURL=webpack://leader-board/./src/assets/movie.png?");
 
 /***/ })
 
@@ -171,6 +181,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -185,6 +207,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

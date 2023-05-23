@@ -25,6 +25,13 @@
         <div class="popup">
             <button id="close-button">x</button>
             <div id="showinfo" class="showinfo"></div>
+            <form action="" class="form">
+                <label for="inputName">Name:</label>
+                <input type="text" id="user-input" name="username" placeholder="Your Name" required/>
+                <label for="commentName">Comment:</label>
+                <textarea name="comment" id="user-comment" type="text" placeholder="Your comment" required></textarea>
+                <button class="submit" id="submit" data-index="${id}" type="submit">Comment</button>
+            </form>
         </div>
     </section>
     <footer class="footer">

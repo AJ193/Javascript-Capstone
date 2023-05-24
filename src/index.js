@@ -1,6 +1,7 @@
 import './style.css';
 import movie from './assets/movie.png';
-import postComments from './modules/postCommnets.js';
+import postComments from './modules/postComments.js';
+import displayComments from './modules/displayComments.js';
 
 const logo = document.getElementById('logo');
 logo.src = movie;
@@ -10,7 +11,7 @@ container.appendChild(logo);
 
 // submitting commnets
 const submit = document.querySelector('.submit');
-const userInput = document.getElementById('user-Input');
+const userInput = document.getElementById('user-input');
 const userComment = document.getElementById('user-comment');
 
 // closing the comment section
@@ -77,11 +78,14 @@ items.addEventListener('click', async (event) => {
     const showMovie = document.getElementById('movie');
     showMovie.style.display = 'block';
 
+    displayComments(selectedMovie.id);
+
     submit.addEventListener('click', async (e) => {
       e.preventDefault();
       await postComments(selectedMovie.id, userInput.value, userComment.value);
       userComment.value = '';
       userInput.value = '';
+      displayComments(selectedMovie.id);
     });
   }
 

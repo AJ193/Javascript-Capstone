@@ -1,11 +1,17 @@
 import './style.css';
 import movie from './assets/movie.png';
+import postComments from './modules/postCommnets.js';
 
 const logo = document.getElementById('logo');
 logo.src = movie;
 
 const container = document.getElementById('cont');
 container.appendChild(logo);
+
+// submitting commnets
+const submit = document.querySelector('.submit');
+const userInput = document.getElementById('user-Input');
+const userComment = document.getElementById('user-comment');
 
 // closing the comment section
 const closeBtn = document.getElementById('close-button');
@@ -40,7 +46,7 @@ const populateData = async () => {
                     <p>${data.name}</p>
                     <button class="commentBtn" data-index="${i}">comment</button>
                 </div>
-                <i class="fa-regular fa-heart" data-index="${i}"></i>
+                <i class="fa-regular fa-heart likeBtn" data-index="${i}"></i>
             </div>
         </div>
         `;
@@ -70,5 +76,17 @@ items.addEventListener('click', async (event) => {
 
     const showMovie = document.getElementById('movie');
     showMovie.style.display = 'block';
+
+    submit.addEventListener('click', async (e) => {
+      e.preventDefault();
+      await postComments(selectedMovie.id, userInput.value, userComment.value);
+      userComment.value = '';
+      userInput.value = '';
+    });
+  }
+
+  if (event.target.classList.contains('likeBtn')) {
+    // const index = parseInt(event.target.dataset.index, 10);
+    // console.log(index);
   }
 });

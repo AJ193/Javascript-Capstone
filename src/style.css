@@ -34,3 +34,12 @@ header {
   width: 50%;
   left: 50vh;
 }
+
+ul#items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.poke {
+  padding: 30px;
+}

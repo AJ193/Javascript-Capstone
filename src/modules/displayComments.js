@@ -1,8 +1,11 @@
 import getComments from './getComments.js';
 
 const chart = document.getElementById('chart');
+const commentCounter = document.getElementById('comment-counter');
 const displayComments = async (id) => {
   const data = await getComments(id);
+  const length = data?.length ?? 0;
+  commentCounter.innerHTML = `(${length}) comments`;
   chart.innerHTML = '';
   if (!data.error) {
     data.forEach((comment) => {

@@ -6,10 +6,6 @@
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -158,7 +154,7 @@ label {
 
 .chart {
   list-style: none;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   width: 50%;
 }
 
@@ -170,5 +166,26 @@ label {
   border-radius: 3px;
   font-family: monospace;
   font-size: 14px;
-  color: seagreen;
+  color: darkgreen;
+}
+
+#comment-counter {
+  margin: 2rem 0 0.5rem 0;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.likeBtn:hover {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-family: monospace;
 }

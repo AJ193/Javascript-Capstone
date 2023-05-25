@@ -2,6 +2,7 @@ import './style.css';
 import movie from './assets/movie.png';
 import postComments from './modules/postComments.js';
 import displayComments from './modules/displayComments.js';
+import { getLikes, addLikes } from './modules/likes.js';
 
 const logo = document.getElementById('logo');
 logo.src = movie;
@@ -31,7 +32,7 @@ const getData = async () => {
 
 getData();
 
-// display pokemon data
+// display data
 const items = document.getElementById('items');
 
 const populateData = async () => {
@@ -47,7 +48,10 @@ const populateData = async () => {
                     <p>${data.name}</p>
                     <button class="commentBtn" data-index="${i}">comment</button>
                 </div>
-                <i class="fa-regular fa-heart likeBtn" data-index="${i}"></i>
+                <div class="likes">
+                  <i class="fa-regular fa-heart likeBtn"></i>
+                  <p class="numberOfLikes" id="likesCount"></p>
+                </div>
             </div>
         </div>
         `;
@@ -89,8 +93,17 @@ items.addEventListener('click', async (event) => {
     });
   }
 
-  if (event.target.classList.contains('likeBtn')) {
-    // const index = parseInt(event.target.dataset.index, 10);
-    // console.log(index);
-  }
+  const likeBtn = document.querySelectorAll('.likeBtn');
+  const numberOfLikes = document.querySelectorAll('.numberOfLikes');
+
+  likeBtn.forEach((btn, item_id) => {
+    btn.addEventListener('click', async (event) => {
+      event.preventDefault();
+      // numberOfLikes[item_id].textContent = '';
+      await addLikes(item_id);
+      const likes = await getLikes();
+      const lik = likes[item_id].likes;
+      numberOfLikes[item_id].textContent = `${lik} likes`;
+    });
+  });
 });

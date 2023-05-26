@@ -1,6 +1,6 @@
 import getComments from './getComments.js';
 
-const countComments = async (data) => {
+const countComments = (data) => {
   const length = data?.length ?? 0;
   return length;
 };

@@ -9,21 +9,23 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 2% 15%;
   height: 100px;
   background-color: #fff;
-  margin: 18px;
+  margin: 3% 2rem 0;
   gap: 4rem;
 }
 
 .start-btn {
   display: flex;
   position: relative;
-  gap: 8rem;
+  gap: 2rem;
+  align-items: center;
 }
 
 .footer {
-  font-size: 24px;
+  font-size: 18px;
   position: fixed;
   bottom: 0;
   color: white;
@@ -31,12 +33,14 @@ header {
   padding: 6px;
   width: 100%;
   font-family: cursive;
+  text-align: center;
 }
 
 .pop {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
+  background-color: teal;
 }
 
 .poke {
@@ -82,6 +86,7 @@ header {
 
 #logo {
   width: 7rem;
+  filter: drop-shadow(2px 4px 3px black);
 }
 
 .items {
@@ -180,6 +185,12 @@ label {
   align-items: center;
 }
 
+.likeBtn {
+  font-size: 24px;
+  color: mintcream;
+  filter: drop-shadow(2px 4px 3px black);
+}
+
 .likeBtn:hover {
   color: red;
 }
@@ -188,7 +199,8 @@ a {
   text-decoration: none;
   color: black;
   font-size: 24px;
-  font-family: monospace;
+  font-family: 'FontAwesome', Arial, sans-serif;
+  font-weight: bolder;
 }
 
 .home {
@@ -196,4 +208,21 @@ a {
   align-items: center;
   flex-direction: column;
   margin: 3rem 0;
+}
+
+p {
+  color: white;
+  padding: 2px;
+  font-family: cursive;
+}
+
+.commentBtn {
+  margin: 3px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 2px;
+  padding: 2px;
+  color: white;
+  background: linear-gradient(45deg, black, transparent);
+  box-shadow: 5px 5px 10px 4px rgba(0, 0, 0, 0.8);
 }

@@ -34,10 +34,12 @@ getData();
 
 // display data
 const items = document.getElementById('items');
+const count = document.getElementById('count');
 
 const populateData = async () => {
   const data = await getData();
   const limit = 12;
+  let numberofItems = 0;
   data.forEach((data, i) => {
     if (i < limit) {
       items.innerHTML += `
@@ -49,13 +51,15 @@ const populateData = async () => {
                     <button class="commentBtn" data-index="${i}">comment</button>
                 </div>
                 <div class="likes">
-                  <i class="fa-regular fa-heart likeBtn"></i>
+                  <i class="fa-regular fa-heart likeBtn" data-index="${i}"></i>
                   <p class="numberOfLikes" id="likesCount"></p>
                 </div>
             </div>
         </div>
         `;
+      numberofItems += 1;
     }
+    count.innerHTML = `  (${numberofItems})`;
   });
 };
 
@@ -96,14 +100,20 @@ items.addEventListener('click', async (event) => {
   const likeBtn = document.querySelectorAll('.likeBtn');
   const numberOfLikes = document.querySelectorAll('.numberOfLikes');
 
-  likeBtn.forEach((btn, item_id) => {
+  likeBtn.forEach((btn, id) => {
     btn.addEventListener('click', async (event) => {
       event.preventDefault();
-      // numberOfLikes[item_id].textContent = '';
-      await addLikes(item_id);
+      await addLikes(id);
       const likes = await getLikes();
-      const lik = likes[item_id].likes;
-      numberOfLikes[item_id].textContent = `${lik} likes`;
+      const lik = likes[id].likes;
+      numberOfLikes[id].textContent = `${lik} likes`;
     });
+
+    const displayLikes = async () => {
+      const likes = await getLikes();
+      const lik = likes[id].likes;
+      numberOfLikes[id].textContent = `${lik} likes`;
+    };
+    displayLikes();
   });
 });

@@ -1,11 +1,19 @@
 import './style.css';
 import movie from './assets/movie.png';
+import postComments from './modules/postComments.js';
+import displayComments from './modules/displayComments.js';
+import { getLikes, addLikes } from './modules/likes.js';
 
 const logo = document.getElementById('logo');
 logo.src = movie;
 
 const container = document.getElementById('cont');
 container.appendChild(logo);
+
+// submitting commnets
+const submit = document.querySelector('.submit');
+const userInput = document.getElementById('user-input');
+const userComment = document.getElementById('user-comment');
 
 // closing the comment section
 const closeBtn = document.getElementById('close-button');
@@ -24,12 +32,14 @@ const getData = async () => {
 
 getData();
 
-// display pokemon data
+// display data
 const items = document.getElementById('items');
+const count = document.getElementById('count');
 
 const populateData = async () => {
   const data = await getData();
   const limit = 12;
+  let numberofItems = 0;
   data.forEach((data, i) => {
     if (i < limit) {
       items.innerHTML += `
@@ -40,11 +50,16 @@ const populateData = async () => {
                     <p>${data.name}</p>
                     <button class="commentBtn" data-index="${i}">comment</button>
                 </div>
-                <i class="fa-regular fa-heart" data-index="${i}"></i>
+                <div class="likes">
+                  <i class="fa-regular fa-heart likeBtn" data-index="${i}"></i>
+                  <p class="numberOfLikes" id="likesCount"></p>
+                </div>
             </div>
         </div>
         `;
+      numberofItems += 1;
     }
+    count.innerHTML = `  (${numberofItems})`;
   });
 };
 
@@ -70,5 +85,32 @@ items.addEventListener('click', async (event) => {
 
     const showMovie = document.getElementById('movie');
     showMovie.style.display = 'block';
+
+    displayComments(selectedMovie.id);
+
+    submit.addEventListener('click', async (e) => {
+      e.preventDefault();
+      await postComments(selectedMovie.id, userInput.value, userComment.value);
+      userComment.value = '';
+      userInput.value = '';
+      displayComments(selectedMovie.id);
+    });
   }
+
+  const likeBtn = document.querySelectorAll('.likeBtn');
+  const numberOfLikes = document.querySelectorAll('.numberOfLikes');
+
+  likeBtn.forEach((btn, id) => {
+    btn.addEventListener('click', async (event) => {
+      event.preventDefault();
+      await addLikes(id);
+    });
+
+    const displayLikes = async () => {
+      const likes = await getLikes();
+      const lik = likes[id].likes;
+      numberOfLikes[id].textContent = `${lik} likes`;
+    };
+    displayLikes();
+  });
 });

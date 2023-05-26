@@ -1,11 +1,11 @@
 const getLikes = async () => {
-  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/8akpQq4YTxQqETVC3jxI/likes');
+  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/r4nfU6TWW3cEcodrINL5/likes');
   const likes = await res.json();
   return likes;
 };
 
 const addLikes = async (id) => {
-  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/8akpQq4YTxQqETVC3jxI/likes',
+  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/r4nfU6TWW3cEcodrINL5/likes',
     {
       method: 'POST',
       headers: {

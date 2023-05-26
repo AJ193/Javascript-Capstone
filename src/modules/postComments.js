@@ -1,5 +1,5 @@
 const postComments = async (id, username, comment) => {
-  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/Apps/Eo5MGdJJXbNxseIFE3vX/comments',
+  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/Apps/r4nfU6TWW3cEcodrINL5/comments',
     {
       method: 'POST',
       headers: {

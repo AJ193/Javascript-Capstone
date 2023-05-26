@@ -1,5 +1,5 @@
 const getComments = async (id) => {
-  const URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/Apps/Eo5MGdJJXbNxseIFE3vX/comments?item_id=${id}`;
+  const URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/Apps/r4nfU6TWW3cEcodrINL5/comments?item_id=${id}`;
   const res = await fetch(URL,
     {
       method: 'GET',

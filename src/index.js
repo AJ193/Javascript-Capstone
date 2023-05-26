@@ -104,9 +104,6 @@ items.addEventListener('click', async (event) => {
     btn.addEventListener('click', async (event) => {
       event.preventDefault();
       await addLikes(id);
-      const likes = await getLikes();
-      const lik = likes[id].likes;
-      numberOfLikes[id].textContent = `${lik} likes`;
     });
 
     const displayLikes = async () => {
